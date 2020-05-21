@@ -17,3 +17,5 @@ WORKDIR /var/www
 
 COPY ./src/composer.json ./src/composer.lock ./
 RUN composer install --no-scripts --no-autoloader
+
+RUN chown -R www-data:www-data /var/www
